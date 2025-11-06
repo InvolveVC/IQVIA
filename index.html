@@ -6,7 +6,7 @@
 <title>SQOD Troubleshooting Guide</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  :root{ --brand:#140B42; --pink:#0C7BC0; --bg:#F3F4FD; --card:#fff; }
+  :root{ --brand:#140B42; --pink:#0C7BC0; --bg:#E8EDEE; --card:#fff; }
   body{ margin:0; background:var(--bg); font-family:'Poppins',sans-serif; color:var(--brand);
         display:flex; justify-content:center; padding:32px 0; }.card{ position:relative; width:70%; max-width:860px; min-height:78vh; background:#fff; border-radius:20px;
           padding:28px 32px 92px; box-shadow:0 10px 32px rgba(8,10,82,0.10); display:flex; align-items:center; }.content{ max-width:740px; margin:0 auto; text-align:center; }.answer .content{ text-align:left; font-size:1.12rem; line-height:1.72; max-width:660px; }
@@ -82,7 +82,7 @@ const SLIDES = {
 `},
   "C35": {type:"a", text:`"A benefit of using SQOD, is that your video consultation service and website is <b>fully customisable!</b><br><br>For a detail how-to guide on all the available customisation options, please visit our resource available here.. To change <b>customisation settings</b> for an individual Waiting Room, you can do do so by selecting the pencil icon on the desired waiting room then scrolling towards the bottom of the page and navigating through the available tabs.<br><br>Alternatively, if you are having technical difficulties with customising your SQOD site or would like assistance, please contact our Customer Support team at <b><a href="mailto:customer.support@involve.vc">customer.support@involve.vc</a></b>. <br>We are here to help you get the most out of your service with SQOD."
 `},
-  "C4": {type:"q", text:`"Which live call issue are you experiencing?"`, buttons:[{label:"Audio visual problems", next:"C2"}, {label:"Patien connectivity", next:"C412"}, {label:"Group calls", next:"C42"}]},
+  "C4": {type:"q", text:`"Which live call issue are you experiencing?"`, buttons:[{label:"Audio visual problems", next:"C2"}, {label:"Patient connectivity", next:"C412"}, {label:"Group calls", next:"C42"}]},
   "C412": {type:"q", text:`"Has the patient advised they have joined the consultation, but you cannot see them within the call?"`, buttons:[{label:"Yes", next:"C413"}, {label:"No", next:"C41"}]},
   "C413": {type:"a", text:`"With all SQOD video consultations, you as the service provider will enter the call <b>before</b> your patient proceeds. If your patient has advised that they have joined a consultation, but you cannot see anyone else as attending, there may be an issue with the invite link used or their connection to the platform.<br><br>To resolve this, please place the call on hold by selecting "Leave Room" then re-start the call. This should re-trigger the patient's connection attempt. <br><br> If this does not work, please ask your patient to attempt re-joining via their <b>originial invite link</b>, or alternatively you can reshare the link in-platform by pressing the "Invite" icon on the desired waiting room or scheduled call."
 `},
@@ -192,7 +192,7 @@ function renderSlide(id){
   // reset classes each time
   card.className = "card";
 
-  const dynamicSlides = ["C6","C2A","C2AA","PA3","PA1","C32","C331","C332","C42","C7521"];
+  const dynamicSlides = ["C6","C2A","C2AA","PA3","PA1","C32","C331","C332","C42","C7521","C413"];
   if(dynamicSlides.includes(id)){
     card.classList.add("dynamic");
   }
@@ -220,3 +220,4 @@ renderSlide(startId);
 </script>
 </body>
 </html>
+
